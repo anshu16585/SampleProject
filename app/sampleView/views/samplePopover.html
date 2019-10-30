@@ -1,0 +1,21 @@
+<div class="Sample-popover-inner-container">
+    <div class="Sample-popover-content">
+		<div class="Sample-popover-inputField required">
+			<div class="Sample-popover-inputField" data-bind="visible: bToShowDirectory">
+				<label data-i18n="app:modules.sampleView.Popover.ToCC"></label>
+				<input
+					data-bind="textInput: sPersonInput, style: {backgroundColor: sPersonInput()=='' ? '#FFFFA0': '#FFFFFF'}"
+					type="text" class="canSearch" />
+				<div class="SamplePopover-binoculars"
+					data-bind="visible: bToShow,click: function(){searchPerson('TEST')}"></div>
+			</div>
+		</div>
+    </div>
+    <div class="Sample-popover-footer">
+        <button class="btn" type="button" data-bind="click: submit, enable: bIsSubmitEnabled"
+            data-i18n="app:modules.sampleView.statusUpdatePopover.submitLabel"></button>
+        <button class="btn" type="button" data-bind="click: cancel"
+            data-i18n="app:modules.sampleView.Popover.cancelLabel"></button>
+    </div>
+    <div class="Sample-retrievingData" data-bind="visible:bIsUpdating"></div>
+</div>
